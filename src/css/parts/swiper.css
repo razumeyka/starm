@@ -247,12 +247,38 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: rgb(255, 199, 2);
+	display: inline-block;
+	position: absolute;
+	font-size: 24px;
+	font-weight: 500;
+	color: rgb(180, 180, 180);
+	padding-left: 10px;
+	margin: 0;
 }
+
+.swiper-pagination-bullet:first-child {
+	top: 48px;
+	right: -9px;
+}
+
+.swiper-pagination-bullet:nth-child(2n) {
+	top: 130px;
+	right: -35px;
+}
+
+.swiper-pagination-bullet:last-child {
+	top: 209px;
+	right: -17px;
+}
+
+.swiper-pagination-bullet:focus {
+	outline: none;
+}
+
+.swiper-pagination-bullet-active {
+	color: rgb(255, 199, 2);
+}
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
@@ -265,33 +291,69 @@ button.swiper-pagination-bullet {
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
 }
-.swiper-pagination-bullet-active {
-	background: rgba(255, 199, 2, 0.5);
-	width: 13px;
-	height: 13px;
-	position: relative;
-	margin-left: -4px;
+
+.swiper-pagination-bullet:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffc702;
+    position: absolute;
+    left: -13px;
+    top: 17px;
 }
 
 .swiper-pagination-bullet-active:before {
+	background: rgba(255, 199, 2, 0.5);
+	width: 13px;
+	height: 13px;
+	left: -16px;
+}
+
+.swiper-pagination-bullet-active:after {
 	content: "";
 	border-radius: 50%;
 	background-color: rgb(255, 255, 255);
 	width: 5px;
 	height: 5px;
 	position: absolute;
-	top: 4px;
-	left: 4px;
+	top: 21px;
+	left: -12px;
 }
+
 .swiper-container-vertical > .swiper-pagination-bullets {
 	background: url(../../images/slider-line.png) no-repeat right;
-	background-size: contain;
+	background-size: cover;
 	width: 135px;
-	height: 330px;
-	right: 10px;
-	top: 50%;
+	height: 345px;
+	right: 35px;
+	top: 172px;
 	transform: translate3d(0px, -50%, 0);
 }
+
+@media screen and (max-width: 1023px) {
+	.swiper-container-vertical > .swiper-pagination-bullets {
+		height: 260px;
+		right: 81px;
+		top: 128px;
+	}
+	
+	.swiper-pagination-bullet:first-child {
+		top: 27px;
+		right: -15px;
+	}
+
+	.swiper-pagination-bullet:nth-child(2n) {
+		top: 90px;
+	}
+
+	.swiper-pagination-bullet:last-child {
+		top: 160px;
+	}
+
+
+}
+
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 20px 0;
   display: block;

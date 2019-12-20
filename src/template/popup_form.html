@@ -1,20 +1,26 @@
 <div id="order" style="display: none;">
-	<div role="form" class="wpcf7" id="wpcf7-f114-o2" lang="ru-RU" dir="ltr">
+	<div class="popup-caption">Оставьте ваше имя и телефон</div>
+	<div class="popup-caption-small">Наш менеджер Александр перезвонит Вамв течении 15 минут и ответит на все интересующие вопросы</div>
+	<div role="form" class="wpcf7" id="" lang="ru-RU" dir="ltr">
 		<div class="screen-reader-response"></div>
-		<form action="/#wpcf7-f114-o2" method="post" class="wpcf7-form" novalidate="novalidate"> 
+		<form action="/form.php" method="post" class="wpcf7-form form"> 
+			<div class="form__row flex">
+					<span class="wpcf7-form-control-wrap uname"><input type="text" name="uname" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя"></span>
+
+				<span class="wpcf7-form-control-wrap utel"><input type="tel" name="utel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон"></span>
+
+				<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_button"> 
+					<button type="submit" class="wpcf7-submitwl wpcf7-submit button">Перезвонить</button> 
+				</span>
+			</div>
 			
-			<div class="popup-caption">Вызвать замерщика</div>
-			
-			<span class="wpcf7-form-control-wrap uname"><input type="text" name="uname" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваше имя"></span>
-			
-			<span class="wpcf7-form-control-wrap utel"><input type="tel" name="utel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Ваш телефон"></span>
-			
-			<span class="wpcf7-form-control-wrap ucomment"><input type="text" name="utel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Ваш адрес"></span>
-			
-			<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_button"> 
-				<button type="submit" class="wpcf7-submitwl wpcf7-submit button button_big">Отправить</button> 
-				<span class="ajax-loader"></span>
-			</span><div class="wpcf7-response-output wpcf7-display-none"></div>
+			<div class="form__data-policy">
+				<label class="form__checkbox-wr">
+					<input type="checkbox"/>
+					<span class="form__checkbox"></span>
+				</label>
+				<div class="form__conf">Даю согласие на обработку персональных данных</div>
+			</div>
 		</form>
 	</div>		
 </div>

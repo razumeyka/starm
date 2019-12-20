@@ -14,9 +14,7 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		//функция вызывается всегда, при изменении размера окна. Для того, чтобы она вызывалась только при изменении ширины окна - этот пункт
 		if(ww==window.innerWidth) return;//
-		if(window.innerWidth > 1279) {
-			$('header .navbar').show(); 
-		} else {
+		if(window.innerWidth > 919) {
 			$('header .navbar').hide();
 			$('.burger').removeClass('burger_active'); 
 		}

@@ -4,9 +4,27 @@
 @import "parts/header.less";
 @import "parts/main-screen.less";
 @import "parts/menu.less";
-@import "parts/form.less";
 @import "parts/footer.less";
 @import "parts/popup.less";
+
+.main-content {
+	padding: 50px 0 85px;
+}
+
+.main-content__img {
+    background: url(../images/plate.jpg) no-repeat center;
+    background-size: contain;
+    width: 350px;
+    height: 315px;
+    margin-top: 20px;
+}
+
+.main-content__text {
+	box-sizing: border-box;
+	padding-left: 30px;
+	flex: 1;
+}
+
 
 
 
@@ -26,12 +44,27 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.main-content {
+		padding: 34px 0 59px;
+	}
 	
-	
+	.main-content__img {
+		width: 283px;
+		height: 265px;
+	}
+
 }
 
+
+
 @media screen and (max-width: 767px) {
-    
+    .main-content .wrapper {
+		flex-direction: column;
+	}
+	
+	.main-content__text {
+		padding: 30px 0 0 0;
+	}
 }
 
 @media screen and (max-width: 639px) {

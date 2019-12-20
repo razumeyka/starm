@@ -2,6 +2,7 @@
 
 .navbar {
 	height: 40px;
+	position: relative;
 }
 
 .menu {
@@ -12,8 +13,8 @@
 
 .menu li {
     list-style: none;
-    position: relative;
 	float: left;
+	position: relative;
 }
 
 .menu a {
@@ -21,7 +22,7 @@
 	font-size: 20px;
 	font-weight: 500;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 14px;
     line-height: 40px;
 	transition: all 0.5s;
 	position: relative;
@@ -36,23 +37,26 @@
 }
 
 .menu li.menu-item-has-children a:before {
-	content: "";
-	background: url(../../images/menu-icon.png) no-repeat center;
-	width: 12px;
-	height: 7px;
-	position: absolute;
-	right: 0;
+    content: "";
+    background: url(../../images/menu-icon.png) no-repeat center;
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    right: -5px;
+    top: 20px;
 }
 
 .sub-menu {
     position: absolute;
     margin: 0 auto;
-    padding: 10px;
+    padding: 13px;
     top: 40px;
-	left: 0;
+    right: -70px;
+    left: -6px;
+    font-family: sans-serif;
     z-index: 3;
     background: #ffc702;
-	display: none;
+    display: none;
 }
 
 .menu li:hover .sub-menu {
@@ -60,20 +64,22 @@
 }
 
 .sub-menu li {
-	position: relative; 
 	float: none;
 }
 
 .sub-menu li a {
     position: relative; 
     font-size: 18px;
-	font-size: 18px;
 	font-weight: 400;
     line-height: 1;
-    padding: 15px 0;
+    padding: 8px 0;
     border-bottom: 1px solid rgb(51, 51, 51); 	
     width: 100%;
 } 
+
+.menu .sub-menu a:hover {
+    color: #000000;
+}
 
 .sub-menu li:last-child a{
 	border-bottom:0;
@@ -132,6 +138,18 @@
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
+	.menu a {
+		font-size: 16px;
+		padding: 0 10px;
+	}
+	
+	.sub-menu li a {
+		font-size: 16px;
+	}
+	
+}
+
+@media screen and (max-width: 920px) {
 	
 	.burger {
         display: block;
@@ -152,12 +170,15 @@
     
     .menu>li {
         float: none;
-		border-top: 1px solid #c2c2c2;
+		border-bottom: 1px solid rgb(51, 51, 51);
     } 
     
     .menu>li>a {
 		display: block; 
 		padding:0;
+		text-align: left;
+		font-size: 24px;
+		font-weight: 400;
 	}  
 	
 	.menu li:hover .sub-menu {
@@ -167,7 +188,7 @@
 	.menu li .sub-menu {
 		position: static; 
 		box-shadow: none;
-		border-top: 1px solid #c2c2c2;
+		padding-left: 25px;
     }
 	
 	.sub-menu li {
@@ -177,13 +198,14 @@
 	
 	.sub-menu li a {
 		width: 100%;
-		border-top:  1px solid rgb(194, 194, 194);
+		border-bottom: 1px solid rgb(51, 51, 51);
+		text-align: left;
+		font-size: 24px;
 	} 
 	
-}
-
-@media screen and (max-width: 1023px) {
-	
+	.menu li a:hover {
+		color: rgb(40, 40, 40);
+	}  
 	
 }
 

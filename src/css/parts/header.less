@@ -9,6 +9,10 @@ header {
 	z-index: 1000;
 }
 
+header .navbar {
+	display: none;
+}
+
 .logo {
 	display: block;
 	background: url(../images/logo.png) no-repeat center;
@@ -16,56 +20,111 @@ header {
 	width: 160px;
     height: 40px;
 	text-decoration: none;
+	margin-bottom: 45px;
 }
 
 .phone{
     display: block;
     font-size: 18px;
 	font-weight: 500;
-	padding-left: 30px;
+	padding-left: 23px;
 	position: relative;
 }
 
 .phone:before {
-	content: "";
-	background: url(../../images/001-call-answer.svg) no-repeat center;
-	background-size: contain;
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	left: 0;
+    content: "";
+    background: url(../../images/001-call-answer.svg) no-repeat center;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 6px;
 }
 
 .mail {
 	font-size: 18px;
 	position: relative;
-	padding-left: 30px;
+	padding-left: 23px;
 }
 
 .mail:before {
     content: "";
     background: url(../../images/002-envelope.svg) no-repeat center;
 	background-size: contain;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     position: absolute;
     left: 0;
+    top: 4px;
 }
 
 .free-call {
-	font-size: 18px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
+	header {
+		left: 15px;
+	}
 	
+	.phone{
+		font-size: 16px;
+	}
+
+
+	.mail {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
+	header {
+		top: 23px;
+	}
 	
+	.logo {
+		background: url(../images/logo.png) no-repeat center left;
+		background-size: contain;
+		width: 160px;
+		height: 33px;
+		margin-bottom: 35px;
+	}
 }
+
+@media screen and (max-width: 920px) {
+	header {
+		position: static;
+		padding: 10px;
+	}
+	
+	.logo {
+		background: url(../images/logo.png) no-repeat center;
+		background-size: contain;
+		margin: auto 0;
+	}
+	
+	.header-mobile {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	header .navbar {
+		background: #ffc702;
+		height: auto;
+		right: -15px;
+		left: -15px;
+		position: absolute;
+		z-index: 10;
+		padding: 20px 30px 40px;
+	}
+}
+
+
 
 @media screen and (max-width: 767px) {
 	

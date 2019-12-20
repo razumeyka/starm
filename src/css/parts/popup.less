@@ -1,15 +1,99 @@
 #order {
     display: none;
-	background: #000000;
-    max-width: 360px;
+    max-width: 600px;
     text-align: center;
+	border-radius: 14px;
+	box-shadow: 2.5px 4.33px 24px 0px rgba(173, 173, 173, 0.23);
+	font-size: 20px;
+	font-size: 20px;
 }
 
 .popup-caption {
-	font-size: 20px;
-	color: rgb(255,255,255);
+	font-weight: 700;
 	margin-bottom: 20px;
 }
+
+.form__row  {
+	flex-wrap: nowrap;
+    box-sizing: border-box;
+	margin: 15px -12px;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+	width: 33.3333%;
+	padding: 12px;
+}
+
+.wpcf7-form-control {
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    height: 41px;
+    width: 100%; 
+    outline: 0;
+    padding: 0 20px;
+	border: 1px solid rgb(230, 230, 230);
+	border-radius: 18px;
+	font-size: 14px;
+}
+
+input:not([type=submit]):focus {
+	border: 1px solid #ffc702;
+}
+
+.form__data-policy {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.form__checkbox-wr {
+	box-sizing: border-box;
+	padding: 0 5px;
+	text-align: center;
+}
+
+.form__checkbox-wr input {
+	display: none;
+}
+
+.form__checkbox {
+	position: relative;
+	cursor: pointer;
+}
+
+.form__checkbox:before {
+	content: '';
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(255, 199, 2);
+  border-radius: 2px;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	top: -9px;
+	left: 0;
+}
+
+
+.form__checkbox-wr input:checked+.form__checkbox:after {
+	content: "";
+	border-radius: 2px;
+	background-color: rgb(255, 199, 2);
+	width: 11px;
+	height: 11px;
+	position: absolute;
+	left: 4px;
+	top: -5px;
+}
+
+.form__conf {
+	font-size: 12px;
+	padding-left: 25px;
+}
+
+
 
 
 
@@ -22,6 +106,31 @@
 
 @media screen and (max-width: 767px) {
 	
+	#order {
+		font-size: 16px;
+	}
+	
+	.form__row  {
+		flex-direction: column;
+		margin: 30px 0 0;
+	}
+	
+	.wpcf7-form-control-wrap {
+		width: 100%;
+		max-width: 245px;
+		margin: 0 auto;
+		padding: 10px 0;
+	}
+	
+	.form .button {
+		width: 245px;
+	}
+	
+	.form__data-policy {
+		max-width: 245px;
+		margin: 0 auto;
+		text-align: left;
+	}
 	
 	
 }
